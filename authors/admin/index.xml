@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mariusz Slabicki</title><link>/authors/admin/</link><atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml"/><description>Mariusz Slabicki</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Mariusz Slabicki</copyright><lastBuildDate>Tue, 05 Feb 2019 00:00:00 +0000</lastBuildDate><image><url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url><title>Mariusz Slabicki</title><link>/authors/admin/</link></image><item><title>Display Jupyter Notebooks with Academic</title><link>/post/jupyter/</link><pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate><guid>/post/jupyter/</guid><description>&lt;pre>&lt;code class="language-python">from IPython.core.display import Image
+Image('https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png')
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="./academic_0_0.png" alt="png">&lt;/p>
+&lt;pre>&lt;code class="language-python">print(&amp;quot;Welcome to Academic!&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>Welcome to Academic!
+&lt;/code>&lt;/pre>
+&lt;h2 id="install-python-and-jupyter">Install Python and Jupyter&lt;/h2>
+&lt;p>&lt;a href="https://www.anaconda.com/distribution/#download-section">Install Anaconda&lt;/a> which includes Python 3 and Jupyter notebook.&lt;/p>
+&lt;p>Otherwise, for advanced users, install Jupyter notebook with &lt;code>pip3 install jupyter&lt;/code>.&lt;/p>
+&lt;h2 id="create-a-new-blog-post-as-usualhttpssourcethemescomacademicdocsmanaging-contentcreate-a-blog-post">Create a new blog post &lt;a href="https://sourcethemes.com/academic/docs/managing-content/#create-a-blog-post">as usual&lt;/a>&lt;/h2>
+&lt;p>Run the following commands in your Terminal, substituting &lt;code>&amp;lt;MY_WEBSITE_FOLDER&amp;gt;&lt;/code> and &lt;code>my-post&lt;/code> with the file path to your Academic website folder and a name for your blog post (without spaces), respectively:&lt;/p>
+&lt;pre>&lt;code class="language-bash">cd &amp;lt;MY_WEBSITE_FOLDER&amp;gt;
+hugo new --kind post post/my-post
+cd &amp;lt;MY_WEBSITE_FOLDER&amp;gt;/content/post/my-post/
+&lt;/code>&lt;/pre>
+&lt;h2 id="create-or-upload-a-jupyter-notebook">Create or upload a Jupyter notebook&lt;/h2>
+&lt;p>Run the following command to start Jupyter within your new blog post folder. Then create a new Jupyter notebook (&lt;em>New &amp;gt; Python Notebook&lt;/em>) or upload a notebook.&lt;/p>
+&lt;pre>&lt;code class="language-bash">jupyter notebook
+&lt;/code>&lt;/pre>
+&lt;h2 id="convert-notebook-to-markdown">Convert notebook to Markdown&lt;/h2>
+&lt;pre>&lt;code class="language-bash">jupyter nbconvert Untitled.ipynb --to markdown --NbConvertApp.output_files_dir=.
+# Copy the contents of Untitled.md and append it to index.md:
+cat Untitled.md | tee -a index.md
+# Remove the temporary file:
+rm Untitled.md
+&lt;/code>&lt;/pre>
+&lt;h2 id="edit-your-post-metadata">Edit your post metadata&lt;/h2>
+&lt;p>Open &lt;code>index.md&lt;/code> in your text editor and edit the title etc. in the &lt;a href="https://sourcethemes.com/academic/docs/front-matter/">front matter&lt;/a> according to your preference.&lt;/p>
+&lt;p>To set a &lt;a href="https://sourcethemes.com/academic/docs/managing-content/#featured-image">featured image&lt;/a>, place an image named &lt;code>featured&lt;/code> into your post&amp;rsquo;s folder.&lt;/p>
+&lt;p>For other tips, such as using math, see the guide on &lt;a href="https://sourcethemes.com/academic/docs/writing-markdown-latex/">writing content with Academic&lt;/a>.&lt;/p></description></item><item><title>Academic: the website designer for Hugo</title><link>/post/getting-started/</link><pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate><guid>/post/getting-started/</guid><description>&lt;p>&lt;strong>Academic&lt;/strong> makes it easy to create a beautiful website for free using Markdown. Customize anything on your site with widgets, themes, and language packs.&lt;/p>
+&lt;p>Follow our easy &lt;a href="https://sourcethemes.com/academic/docs/install/">step by step guide&lt;/a> to learn how to build your own free website with Academic. &lt;a href="https://academic-demo.netlify.com/">Check out the personal demo&lt;/a> or the &lt;a href="https://sourcethemes.com/academic/">business demo&lt;/a> of what you&amp;rsquo;ll get in less than 10 minutes.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://sourcethemes.com/academic/docs/">View the documentation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://discuss.gohugo.io/">Ask a question&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/gcushen/hugo-academic/issues">Request a feature or report a bug&lt;/a>&lt;/li>
+&lt;li>Updating? View the &lt;a href="https://sourcethemes.com/academic/docs/update/">Update Guide&lt;/a> and &lt;a href="https://sourcethemes.com/academic/updates/">Release Notes&lt;/a>&lt;/li>
+&lt;li>Support development of Academic:
+&lt;ul>
+&lt;li>&lt;a href="https://paypal.me/cushen">Donate a coffee&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.patreon.com/cushen">Become a backer on Patreon&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.redbubble.com/people/neutreno/works/34387919-academic">Decorate your laptop or journal with an Academic sticker&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://academic.threadless.com/">Wear the T-shirt&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://github.com/gcushen/hugo-academic/">&lt;img src="https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png" alt="Screenshot">&lt;/a>&lt;/p>
+&lt;p>Key features:&lt;/p>
+&lt;ul>
+&lt;li>Easily manage various content including homepage, blog posts, publications, talks, and projects&lt;/li>
+&lt;li>Extensible via &lt;strong>color themes&lt;/strong> and &lt;strong>widgets/plugins&lt;/strong>&lt;/li>
+&lt;li>Write in &lt;a href="https://sourcethemes.com/academic/docs/writing-markdown-latex/">Markdown&lt;/a> for easy formatting and code highlighting, with &lt;a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX&lt;/a> for mathematical expressions&lt;/li>
+&lt;li>Social/academic network linking, &lt;a href="https://analytics.google.com">Google Analytics&lt;/a>, and &lt;a href="https://disqus.com">Disqus&lt;/a> comments&lt;/li>
+&lt;li>Responsive and mobile friendly&lt;/li>
+&lt;li>Simple and refreshing one page design&lt;/li>
+&lt;li>Multilingual and easy to customize&lt;/li>
+&lt;/ul>
+&lt;h2 id="color-themes">Color Themes&lt;/h2>
+&lt;p>Academic is available in different color themes and font themes.&lt;/p>
+&lt;div class="gallery">
+&lt;a data-fancybox="gallery-gallery" href="/post/getting-started/gallery/theme-1950s.png" data-caption="1950s">
+&lt;img data-src="/post/getting-started/gallery/theme-1950s_huaf5482f8cea0c5a703a328640e3b7509_21614_0x190_resize_lanczos_2.png" class="lazyload" alt="">
+&lt;/a>
+&lt;a data-fancybox="gallery-gallery" href="/post/getting-started/gallery/theme-apogee.png" data-caption="Apogee">
+&lt;img data-src="/post/getting-started/gallery/theme-apogee_hu4b45d99db97150df01464c393bfd17d4_24119_0x190_resize_lanczos_2.png" class="lazyload" alt="">
+&lt;/a>
+&lt;a data-fancybox="gallery-gallery" href="/post/getting-started/gallery/theme-coffee-playfair.png" data-caption="Coffee theme with Playfair font">
+&lt;img data-src="/post/getting-started/gallery/theme-coffee-playfair_hu446a8f670cc5622adcc77b97ba95f6c5_22462_0x190_resize_lanczos_2.png" class="lazyload" alt="">
+&lt;/a>
+&lt;a data-fancybox="gallery-gallery" href="/post/getting-started/gallery/theme-cupcake.png" data-caption="Cupcake">
+&lt;img data-src="/post/getting-started/gallery/theme-cupcake_hueba8cfa8cfbc7543924fcbf387a99e92_23986_0x190_resize_lanczos_2.png" class="lazyload" alt="">
+&lt;/a>
+&lt;a data-fancybox="gallery-gallery" href="/post/getting-started/gallery/theme-dark.png" data-caption="Dark">
+&lt;img data-src="/post/getting-started/gallery/theme-dark_hu1e8601ecc47f58eada7743fdcd709d3d_21456_0x190_resize_lanczos_2.png" class="lazyload" alt="">
+&lt;/a>
+&lt;a data-fancybox="gallery-gallery" href="/post/getting-started/gallery/theme-default.png" data-caption="Default">
+&lt;img data-src="/post/getting-started/gallery/theme-default_huba6228b7bdf30e2f03f12ea91b2cba0d_21751_0x190_resize_lanczos_2.png" class="lazyload" alt="">
+&lt;/a>
+&lt;a data-fancybox="gallery-gallery" href="/post/getting-started/gallery/theme-forest.png" data-caption="Forest">
+&lt;img data-src="/post/getting-started/gallery/theme-forest_hu4f093a1c683134431456584193ea41ee_21797_0x190_resize_lanczos_2.png" class="lazyload" alt="">
+&lt;/a>
+&lt;a data-fancybox="gallery-gallery" href="/post/getting-started/gallery/theme-ocean.png" data-caption="Ocean">
+&lt;img data-src="/post/getting-started/gallery/theme-ocean_hu14831ccafc2219f30a7a096fa7617e01_21760_0x190_resize_lanczos_2.png" class="lazyload" alt="">
+&lt;/a>
+&lt;/div>
+&lt;h2 id="ecosystem">Ecosystem&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>&lt;a href="https://github.com/sourcethemes/academic-admin">Academic Admin&lt;/a>:&lt;/strong> An admin tool to import publications from BibTeX or import assets for an offline site&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://github.com/sourcethemes/academic-scripts">Academic Scripts&lt;/a>:&lt;/strong> Scripts to help migrate content to new versions of Academic&lt;/li>
+&lt;/ul>
+&lt;h2 id="install">Install&lt;/h2>
+&lt;p>You can choose from one of the following four methods to install:&lt;/p>
+&lt;ul>
+&lt;li>one-click install using your web browser (recommended)&lt;/li>
+&lt;li>install on your computer using Git with the Command Prompt/Terminal app&lt;/li>
+&lt;li>install on your computer by downloading the ZIP files&lt;/li>
+&lt;li>install on your computer with RStudio&lt;/li>
+&lt;/ul>
+&lt;h3 id="quick-install-using-your-web-browser">Quick install using your web browser&lt;/h3>
+&lt;ol>
+&lt;li>&lt;a href="https://app.netlify.com/start/deploy?repository=https://github.com/sourcethemes/academic-kickstart">Install Academic with Netlify&lt;/a>
+&lt;ul>
+&lt;li>Netlify will provide you with a customizable URL to access your new site&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>On GitHub, go to your newly created &lt;code>academic-kickstart&lt;/code> repository and edit &lt;code>config.toml&lt;/code> to personalize your site. Shortly after saving the file, your site will automatically update&lt;/li>
+&lt;li>Read the &lt;a href="https://sourcethemes.com/academic/docs/">Quick Start Guide&lt;/a> to learn how to add Markdown content. For inspiration, refer to the &lt;a href="https://github.com/gcushen/hugo-academic/tree/master/exampleSite">Markdown content&lt;/a> which powers the &lt;a href="https://academic-demo.netlify.com/">Demo&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;h3 id="install-with-git">Install with Git&lt;/h3>
+&lt;p>Prerequisites:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://git-scm.com/downloads">Download and install Git&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gohugo.io/getting-started/installing/#quick-install">Download and install Hugo&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;a href="https://github.com/sourcethemes/academic-kickstart#fork-destination-box">Fork&lt;/a> the &lt;em>Academic Kickstart&lt;/em> repository and clone your fork with Git:&lt;/p>
+&lt;pre>&lt;code> git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
+&lt;/code>&lt;/pre>
+&lt;p>&lt;em>Note that if you forked Academic Kickstart, the above command should be edited to clone your fork, i.e. replace &lt;code>sourcethemes&lt;/code> with your GitHub username.&lt;/em>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Initialize the theme:&lt;/p>
+&lt;pre>&lt;code> cd My_Website
+git submodule update --init --recursive
+&lt;/code>&lt;/pre>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="install-with-zip">Install with ZIP&lt;/h3>
+&lt;ol>
+&lt;li>&lt;a href="https://github.com/sourcethemes/academic-kickstart/archive/master.zip">Download&lt;/a> and extract &lt;em>Academic Kickstart&lt;/em>&lt;/li>
+&lt;li>&lt;a href="https://github.com/gcushen/hugo-academic/archive/master.zip">Download&lt;/a> and extract the &lt;em>Academic theme&lt;/em> to the &lt;code>themes/academic/&lt;/code> folder from the above step&lt;/li>
+&lt;/ol>
+&lt;h3 id="install-with-rstudio">Install with RStudio&lt;/h3>
+&lt;p>&lt;a href="https://sourcethemes.com/academic/docs/install/#install-with-rstudio">View the guide to installing Academic with RStudio&lt;/a>&lt;/p>
+&lt;h2 id="quick-start">Quick start&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>If you installed on your computer, view your new website by running the following command:&lt;/p>
+&lt;pre>&lt;code> hugo server
+&lt;/code>&lt;/pre>
+&lt;p>Now visit &lt;a href="http://localhost:1313">localhost:1313&lt;/a> and your new Academic powered website will appear. Otherwise, if using Netlify, they will provide you with your URL.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Read the &lt;a href="https://sourcethemes.com/academic/docs/">Quick Start Guide&lt;/a> to learn how to add Markdown content, customize your site, and deploy it. For inspiration, refer to the &lt;a href="https://github.com/gcushen/hugo-academic/tree/master/exampleSite">Markdown content&lt;/a> which powers the &lt;a href="https://academic-demo.netlify.com/">Demo&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Build your site by running the &lt;code>hugo&lt;/code> command. Then &lt;a href="https://georgecushen.com/create-your-website-with-hugo/">host it for free using Github Pages&lt;/a> or Netlify (refer to the first installation method). Alternatively, copy the generated &lt;code>public/&lt;/code> directory (by FTP, Rsync, etc.) to your production web server (such as a university&amp;rsquo;s hosting service).&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="updating">Updating&lt;/h2>
+&lt;p>Feel free to &lt;em>star&lt;/em> the project on &lt;a href="https://github.com/gcushen/hugo-academic/">Github&lt;/a> to help keep track of updates and check out the &lt;a href="https://sourcethemes.com/academic/updates">release notes&lt;/a> prior to updating your site.&lt;/p>
+&lt;p>Before updating the framework, it is recommended to make a backup of your entire website directory (or at least your &lt;code>themes/academic&lt;/code> directory) and record your current version number.&lt;/p>
+&lt;p>By default, Academic is installed as a Git submodule which can be updated by running the following command:&lt;/p>
+&lt;pre>&lt;code class="language-bash">git submodule update --remote --merge
+&lt;/code>&lt;/pre>
+&lt;p>&lt;a href="https://sourcethemes.com/academic/docs/update/">Check out the update guide&lt;/a> for full instructions and alternative methods.&lt;/p>
+&lt;h2 id="feedback--contributing">Feedback &amp;amp; Contributing&lt;/h2>
+&lt;p>Please use the &lt;a href="https://github.com/gcushen/hugo-academic/issues">issue tracker&lt;/a> to let me know about any bugs or feature requests, or alternatively make a pull request.&lt;/p>
+&lt;p>For support, head over to the &lt;a href="http://discuss.gohugo.io">Hugo discussion forum&lt;/a>.&lt;/p>
+&lt;h2 id="license">License&lt;/h2>
+&lt;p>Copyright 2016-present &lt;a href="https://georgecushen.com">George Cushen&lt;/a>.&lt;/p>
+&lt;p>Released under the &lt;a href="https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md">MIT&lt;/a> license.&lt;/p></description></item></channel></rss>
